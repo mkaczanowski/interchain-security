@@ -59,7 +59,7 @@ func (msg MsgAssignConsumerKey) GetSigners() []sdk.AccAddress {
 
 // GetSignBytes returns the message bytes to sign over.
 func (msg MsgAssignConsumerKey) GetSignBytes() []byte {
-	bz := ModuleCdc.MustMarshalJSON(&msg)
+	bz := AminoCdc.MustMarshalJSON(&msg)
 	return sdk.MustSortJSON(bz)
 }
 
